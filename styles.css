@@ -57,3 +57,31 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
+ul li {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  padding: 12px 8px 12px 50px;
+  font-size: 16px;
+  position: relative;
+}
+li::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  left: 8px;
+  top: 12px;
+  background-position: center;
+  border-radius: 50%;
+}
+li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+li.checked::before {
+  background-image: url(images/checked.jpg);
+}
